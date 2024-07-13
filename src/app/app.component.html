@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a
+            routerLink="">Home</a></li>
+        <li role="presentation" routerLinkActive="active"><a routerLink="servers">Servers</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['users']">Users</a></li>
+        <!-- Here the relative path is working because the it appends /users to the base url -->
+      </ul>
+    </div>
+  </div>
+  <div class=" row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+      <!-- The above line loads the component of the respective route -->
+    </div>
+  </div>
+</div>
